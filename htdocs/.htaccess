@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d 
+RewriteRule ^.*$ - [NC,L]
+rewriteCond %{REQUEST_URI} !^/favicon.ico [NC]
+RewriteRule ^(.*) index.php [NC,L]
